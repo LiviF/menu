@@ -1,0 +1,41 @@
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+.swiper-img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.swiper-button-next, .swiper-button-prev {
+  color: white;
+}
+.swiper-pagination-bullet-active {
+  background: white;
+}
+
+.contacto__label {
+  display: block;
+}
+.contacto__input {
+  width: 50rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 0.5rem;
+}
+.contacto__texto {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.contacto__enviar {
+  background: black;
+  color: white;
+  padding: 1rem 1.5rem;
+}
+.contacto__enviar:hover {
+  background: grey;
+}
+/*# sourceMappingURL=_home.css.map */

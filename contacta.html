@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Ejemplo Split media</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!--CSS - to correctly link the pages of CSS - we added the folder link -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- Javascript-->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data=" { open: false, isTopScroll: true}"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/menu.png" alt="Open menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/close.png" alt="Close menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Equipo</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="escalada.html" class="nav__link">Escalada</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Aventura</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Naturaleza</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Blog</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Contacta</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <main>
+        <!-- Slider main container -->
+        <section class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/boulder.jpg" alt="Boulder">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/escalada-exterior.jpg" alt="Escalada exterior">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/escalada-interior.jpg" alt="Escalada interior">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/hooks.jpg" alt="Hooks">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </section>
+        <!-- modify this form HTML and place wherever you want your form -->
+        <section class="contacto">
+            <div class="container">
+                <h2 class="contacto__titulo">Contacta</h2>
+                <form
+                        action="https://formspree.io/f/xdovnovj"
+                        method="POST"
+                >
+                    <label class="contacto__label">
+                        <span class="contacto__texto">Tu nombre (requerido):</span>
+                        <input class="contacto__input" type="text" required>
+                    </label>
+                    <label class="contacto__label">
+                        <span class="contacto__texto">Tu correo electrónico (requerido)</span>
+                        <input class="contacto__input" type="email" name="email" required>
+                    </label>
+                    <label class="contacto__label">
+                        <span class="contacto__texto">Tu mensaje, incluye tambien el asunto
+(info clases, rutas, experiencias, sugerencias)</span>
+                        <textarea class="contacto__input" name="message"></textarea>
+                    </label>
+                    <p>Marca las casillas</p>
+                    <!-- your other form fields go here -->
+                    <button class="button contacto__enviar" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eveniet ipsa minus possimus quia sed tempora. Accusantium asperiores assumenda error, incidunt laudantium molestiae nobis pariatur placeat provident tempore veritatis voluptatem!</p>
+        <p>Ab accusantium ad assumenda at culpa deserunt dolorum eaque et eum excepturi facere fugit itaque laboriosam laborum minus molestiae molestias quasi qui rem, reprehenderit vel velit voluptatum. Eligendi iusto,
+            obcaecati.</p>
+    </main>
+    </body>
+</html>

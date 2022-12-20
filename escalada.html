@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Ejemplo Split media</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!--fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Manrope&display=swap" rel="stylesheet">
+        <!--CSS - to correctly link the pages of CSS - we added the folder link -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- Javascript-->
+        <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data=" { open: false, isTopScroll: true}"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/menu.png" alt="Open menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__nombre-contenedor">
+                        <p class="nav__nombre">Bosky</p>
+                    </div>
+                    <div class="nav__puesto-contenedor">
+                        <p class="nav__puesto">Escalada  / Naturaleza / Aventura</p>
+                    </div>
+                    <div class="nav__localizacion-contenedor">
+                        <p class="nav__localizacion">Valencia</p>
+                    </div>
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/close.png" alt="Close menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Equipo</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="escalada.html" class="nav__link">Escalada</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Aventura</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Naturaleza</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Blog</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Contacta</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <main>
+        <section class="landing">
+            <h1 class="landing__titulo">Que es la escalada?</h1>
+        </section>
+        <div class="container">
+            <h1>Escalada</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid autem, corporis delectus
+                deleniti dignissimos distinctio esse incidunt iure laborum libero, nemo nihil nisi odio perspiciatis
+                porro quae quas sunt.</p>
+            <p>Accusamus aut culpa cum debitis distinctio dolorum ducimus, earum error facere fugit harum incidunt, ipsa
+                itaque iusto, natus quo saepe tempore totam veritatis voluptatem. Cum fugit natus tempore veniam
+                voluptas.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+            <p>Accusamus aut culpa cum debitis distinctio dolorum ducimus, earum error facere fugit harum incidunt, ipsa
+                itaque iusto, natus quo saepe tempore totam veritatis voluptatem. Cum fugit natus tempore veniam
+                voluptas.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+            <p>
+                <img
+                        class="scroll-efecto"
+                        src="img/carousel/boulder.jpg"
+                        alt="Boulder"
+                        x-data="{show: false}"
+                        x-intersect="show = true"
+                        x-intersect:leave="show = false"
+                        :class="show ? 'scroll-efecto--show' : ''"
+                >
+            </p>
+            <p>Accusamus aut culpa cum debitis distinctio dolorum ducimus, earum error facere fugit harum incidunt, ipsa
+                itaque iusto, natus quo saepe tempore totam veritatis voluptatem. Cum fugit natus tempore veniam
+                voluptas.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+            <p>Accusamus alias atque deleniti numquam officia provident quae quo quos unde voluptate? Aliquam cum ex
+                nemo nisi perspiciatis quaerat, quisquam rerum tempore. A id laborum mollitia nesciunt optio
+                perspiciatis suscipit.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <time datetime="2022-12-20">2022</time>
+        Bosky
+    </footer>
+    </body>
+</html>

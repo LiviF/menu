@@ -1,0 +1,41 @@
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+.button {
+  background: transparent;
+  border: none;
+}
+
+.nav__ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #8C4A32;
+}
+
+.scroll-efecto {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.scroll-efecto--show {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+/*# sourceMappingURL=_base.css.map */

@@ -1,0 +1,53 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  transition: 1.3s
+  z-index: 100
+  &--background
+    background: white
+  &__logo
+    width: 10rem
+  &__open
+    display: none
+  &__close
+    display: none
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .nav
+    &__ul
+      display: flex
+      align-items: center
+      gap: 2rem
+    &__link
+      font-size: 1.5rem
+    &__container-button
+      display: none
+    &__container-links
+      display: flex
+      justify-content: center
+      align-items: center
+    //efecto highlight//
+    &__link
+      position: relative
+    &__link::before
+      content: ''
+      position: absolute
+      z-index: -1
+      top: 0
+      bottom: 0
+      left: -0.25em
+      right: -0.25em
+      background-color: #F2A663
+      transform-origin: bottom center
+      transform: scaleY(0.1)
+      transition: all 0.1s ease-in-out
+    &__link:hover::before
+      transform: scaleY(1)
+      background-color: #F2A663
+    &__nombre-contenedor, &__puesto-contenedor, &__localizacion-contenedor
+      display: none
+
